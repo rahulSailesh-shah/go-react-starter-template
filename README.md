@@ -23,6 +23,7 @@ A modern full-stack starter template combining Go (backend) and React (frontend)
 │   ├── src/                # App source code
 │   │   ├── components/     # UI components (shadcn/ui)
 │   │   ├── hooks/          # Custom React hooks
+│   │   ├── features/       # Feature modules
 │   │   ├── lib/            # Utility functions
 │   │   ├── routes/         # TanStack Router routes
 │   │   └── assets/         # Static assets
@@ -63,6 +64,7 @@ A modern full-stack starter template combining Go (backend) and React (frontend)
 - **shadcn/ui** (component library)
 - **Radix UI** (accessible primitives)
 - **ESLint** (linting)
+- **BetterAuth** (auth management)
 
 ---
 
