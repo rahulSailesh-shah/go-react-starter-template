@@ -1,13 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
+import { requireAuth } from "@/lib/auth-utils";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  beforeLoad: async () => {
+    await requireAuth();
+    throw redirect({ to: "/users" });
+  },
+  component: RouteComponent,
 });
 
-function Index() {
-  return (
-    <div>
-      <div className="p-2">Hello from Index!</div>
-    </div>
-  );
+function RouteComponent() {
+  return <></>;
 }
