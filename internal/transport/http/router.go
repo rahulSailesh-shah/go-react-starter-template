@@ -30,5 +30,4 @@ func RegisterRoutes(r *gin.Engine, authKeys jwk.Set, app *app.App) {
 		protected := r.Group("/api")
 		protected.Use(middleware.AuthMiddleware(authKeys))
 		// protected.Use(middleware.SubscriptionMiddleware(&app.Config.Polar))
-		// Route Groups
 }
